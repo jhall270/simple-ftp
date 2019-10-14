@@ -1,9 +1,10 @@
 # simple-ftp
 
+### Description
 
+This is a simple file transfer client and host using Unix sockets.  The server is written in C and the client is written in Python
 
-
-INSTRUCTIONS:
+### Instructions:
 
 To compile ftserver, use makefile
 
@@ -17,14 +18,14 @@ To run ftclient, use one of the following commands:
     
 
 Example:
-Start ftserver on flip1 using
+Start ftserver on host1 using
     ftserver 6748
 
-Use ftclient on flip2 to get directory listing, request data transfer on port 6749
-    python3 ftclient.py flip1 6748 -l 6749
+Use ftclient on host2 to get directory listing, request data transfer on port 6749
+    python3 ftclient.py host1 6748 -l 6749
 
-User ftclient on flip2 to request shortfile.txt from server on flip1, request data transfer on port 6749
-    python3 ftclient.py flip1 6748 -g shortfile.txt 6749
+User ftclient on host2 to request shortfile.txt from server on host1, request data transfer on port 6749
+    python3 ftclient.py host1 6748 -g shortfile.txt 6749
 
-User ftclient on flip2 to request longfile.txt from server on flip1, request data transfer on port 6749
-    python3 ftclient.py flip1 6748 -g longfile.txt 6749
+User ftclient on host2 to request longfile.txt from server on host1, request data transfer on port 6749
+    python3 ftclient.py host1 6748 -g longfile.txt 6749
